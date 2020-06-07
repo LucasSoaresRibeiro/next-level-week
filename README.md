@@ -67,3 +67,16 @@ npm start
 - POST: Criar uma nova informação no back-end
 - PUT: Atualizar uma informação no back-end
 - DELETE: Remover uma informação no back-end
+
+## Tipos de Parâmetros do Express
+- request.params: Parâmetros utilizados para identificar um recurso específico 
+- request.query: Parâmetros, geralmente opcionais, utilizados para filtros de recursos
+
+# Tecnologias
+
+- Node.js (https://nodejs.org/)
+- Typescript (https://www.typescriptlang.org/)
+- React - JavaScript library for building user interfaces (https://github.com/facebook/react)
+- React Native - A framework for building native apps using React (https://reactnative.dev/)
+- Expo.io - Fast build ap with React Native (https://expo.io/)
+- Knex.js - A SQL Query Builder for Javascript (http://knexjs.org/)
