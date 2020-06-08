@@ -69,7 +69,7 @@ npm start
 - DELETE: Remover uma informação no back-end
 
 ## Convenções de Route Names
-- index: Listagensde registros
+- index: Listagens de registros
 - show: Exibição única de um registro
 - create: Criação de um registro
 - update: Atualização de um registro
