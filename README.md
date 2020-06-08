@@ -1,4 +1,4 @@
-# Next Level Week
+# Ecoleta - Next Level Week
 Projeto-estudo da Next Level Week NLW da Rocket Seat (https://nextlevelweek.com).
 O projeto consiste em 3 aplicações:
 
@@ -18,19 +18,19 @@ O projeto consiste em 3 aplicações:
 
 ## Back-end (server)
 
-- Iniciar repositório sem prompts
+Iniciar repositório sem prompts
 ```
 mkdir server
 npm init -y
 ```
 
-- Adicionar Express
+Adicionar Express
 ```
 npm install express
 npm install @types/express -D
 ```
 
-- Iniciar typescript
+Iniciar typescript
 ```
 npm install typescript -D
 npm install ts-node -D
@@ -38,24 +38,24 @@ npx tsc --init
 npm install ts-node-dev -D
 ```
 
-- Rodar aplicação sem live reload
+Rodar aplicação sem live reload
 ```
 npx ts-node src/server.ts
 ```
 
-- Rodar aplicação com live reload
+Rodar aplicação com live reload
 ```
 npx ts-node-dev src/server.ts
 ```
 
 ## Front-end (web)
 
-- Criar estrutura inicial 
+Criar estrutura inicial 
 ```
 npx create-react-app web --template=typescript
 ```
 
-- Rodar aplicação
+Rodar aplicação
 ```
 npm start
 ```
@@ -67,6 +67,13 @@ npm start
 - POST: Criar uma nova informação no back-end
 - PUT: Atualizar uma informação no back-end
 - DELETE: Remover uma informação no back-end
+
+## Convenções de Route Names
+- index: Listagensde registros
+- show: Exibição única de um registro
+- create: Criação de um registro
+- update: Atualização de um registro
+- delete ou destroy: Remoção de um registro
 
 ## Tipos de Parâmetros do Express
 - request.params: Parâmetros utilizados para identificar um recurso específico 
@@ -80,3 +87,6 @@ npm start
 - React Native - A framework for building native apps using React (https://reactnative.dev/)
 - Expo.io - Fast build ap with React Native (https://expo.io/)
 - Knex.js - A SQL Query Builder for Javascript (http://knexjs.org/)
+
+# Continuar
+- Olhando as Oportunidades: 1h44m44s
