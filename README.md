@@ -79,6 +79,56 @@ npm start
 - request.params: Parâmetros utilizados para identificar um recurso específico 
 - request.query: Parâmetros, geralmente opcionais, utilizados para filtros de recursos
 
+## Tipos de arquivos
+- .ts: Arquivos typescript
+- .d.ts: Arquivos template do typescript
+- .tsx: Arquivos do React para escrever typescript/javascript com tags html/xml
+
+## React e Typescript
+- React.FC<InterfaceNameProps>: React Function Component. Tipo genérico do typescript que recebe uma interface como parâmetro. Ex:
+```
+import React from 'react';
+
+interface HeaderProps {
+    title: string;
+}
+
+const Header:React.FC<HeaderProps> = () => {
+    return (
+        <header>
+            <h1>Ecoleta</h1>
+        </header>
+    );
+};
+
+export default Header;
+```
+- Interface: Definição de tipagem no Typescript (Ver React.FC)
+- useState: Gerenciamento de estados no React
+```
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  
+  const [counter, setCounter] = useState(0);
+
+  function handleButtonClick() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div>
+      <button type="button" onClick={handleButtonClick}>Aumentar</button>
+      <h1>Contador: {counter}</h1>
+    </div>
+  )
+
+}
+
+export default App;
+```
+
 # Tecnologias
 
 - Node.js (https://nodejs.org/)
@@ -89,4 +139,5 @@ npm start
 - Knex.js - A SQL Query Builder for Javascript (http://knexjs.org/)
 
 # Continuar
-- Olhando as Oportunidades: 1h44m44s
+
+Video 03 - 22:59
