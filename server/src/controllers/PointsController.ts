@@ -3,6 +3,35 @@ import knex from '../database/connection';
 
 class PointsController {
 
+    /**
+     * Busca de um ponto de coleta pelo ID
+     * @param request {number} request.params.id
+     * @param response {object} { point, items }
+     */
+    async show (request: Request, response: Response) {
+        const { id } = request.params;
+
+        const point = await knex('points').where('id', id).first();
+
+        if (!point) {
+            return response.status(400).json({ message: 'Point not found' });
+        }
+
+        const items = await knex('items')
+            .join('point_items', 'items.id', '=', 'point_items.item_id')
+            .where('point_items.point_id', id)
+            //.select('items.title'); 
+
+        return response.json({ point, items });
+    }
+
+    /**
+     * Listagem de pontos de coleta de uma cidade
+     * @param request {string} request.query.uf
+     * @param request {string} request.query.city
+     * @param request {number[]} request.query.items
+     * @param response {object} points
+     */
     async index (request: Request, response: Response) {
 
         const { city, uf, items } = request.query;
@@ -21,25 +50,21 @@ class PointsController {
 
         return response.json(points);
 
-    };
-    
-    async show (request: Request, response: Response) {
-        const { id } = request.params;
+    }
 
-        const point = await knex('points').where('id', id).first();
-
-        if (!point) {
-            return response.status(400).json({ message: 'Point not found' });
-        }
-
-        const items = await knex('items')
-            .join('point_items', 'items.id', '=', 'point_items.item_id')
-            .where('point_items.point_id', id)
-            //.select('items.title'); 
-
-        return response.json({ point, items });
-    };
-
+    /**
+     * Criação de um novo ponto de coleta
+     * @param request {string} request.body.name
+     * @param request {string} request.body.name
+     * @param request {string} request.body.email
+     * @param request {string} request.body.whatsapp
+     * @param request {number} request.body.latitude
+     * @param request {number} request.body.longitude
+     * @param request {string} request.body.city
+     * @param request {string} request.body.uf
+     * @param request {number[]} request.body.items
+     * @param response {object} objeto criado
+     */
     async create (request: Request, response: Response) {
         const {
             name,
@@ -84,7 +109,7 @@ class PointsController {
             id: point_id,
             ...point,
         });
-    };
+    }
 }
 
 export default PointsController;

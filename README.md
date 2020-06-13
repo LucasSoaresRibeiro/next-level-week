@@ -70,6 +70,49 @@ Pacote de rotas
 npm install react-router-dom
 ```
 
+## Mobile
+
+Instalar o Expo CLI globalmente
+```
+npm install -g expo-cli
+```
+
+Iniciar projeto
+```
+expo init mobile
+```
+
+Instalar react-navigation
+```
+npm install @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install @react-navigation/stack
+```
+
+Instalar fontes do Google
+```
+expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+```
+
+Instalar extensão para maps
+```
+expo install react-native-maps
+expo install expo-location
+```
+
+Instalar extensão para envio de email
+```
+expo install expo-mail-composer
+```
+
+Rodar projeto
+```
+yarn start # you can open iOS, Android, or web from here, or run them directly with the commands below.
+yarn android
+yarn ios # requires an iOS device or access to a macOS for a simulator
+yarn web
+```
+
 # Conceitos Gerais
 
 ## ES6
