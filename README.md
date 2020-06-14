@@ -1,22 +1,14 @@
-# Ecoleta - Next Level Week
-Projeto-estudo da Next Level Week NLW da Rocket Seat (https://nextlevelweek.com).
-O projeto consiste em 3 aplicações:
+<h1 align="center">
+    <img alt="Ecoleta" title="Ecoleta" src=".github/ecoleta.svg" width="220px" />
+</h1>
 
-- Server: API RESTful em NodeJS/Typescript para:
-  - Regras de negócio
-  - Conexão com o banco de dados
-  - Envio de emails ou conexão com serviços externos
-  - Autenticação e autorização dos usuários
-  - Criptografia e segurança
-
-- Web: Front-end da aplicação em ReactJS para
-  - Listagem de usuários (HTML & CSS)
-
-- Mobile: Aplicação mobile em React Native
+<p align="center">
+  <img alt="Ecoleta" src=".github/ecoleta.png" width="100%">
+</p>
 
 # Conteúdo
-- [Ecoleta - Next Level Week](#ecoleta---next-level-week)
 - [Conteúdo](#conteúdo)
+- [Visão Geral](#visão-geral)
 - [Principais comandos](#principais-comandos)
   - [Back-end (server)](#back-end-server)
   - [Front-end (web)](#front-end-web)
@@ -36,6 +28,22 @@ O projeto consiste em 3 aplicações:
   - [Tipos de arquivos](#tipos-de-arquivos)
   - [React e Typescript](#react-e-typescript)
 - [Tecnologias](#tecnologias)
+
+# Visão Geral
+Projeto-estudo da Next Level Week NLW da Rocket Seat (https://nextlevelweek.com).
+O projeto consiste em 3 aplicações:
+
+- Server: API RESTful em NodeJS/Typescript para:
+  - Regras de negócio
+  - Conexão com o banco de dados
+  - Envio de emails ou conexão com serviços externos
+  - Autenticação e autorização dos usuários
+  - Criptografia e segurança
+
+- Web: Front-end da aplicação em ReactJS para
+  - Listagem de usuários (HTML & CSS)
+
+- Mobile: Aplicação mobile em React Native
 
 # Principais comandos
 
