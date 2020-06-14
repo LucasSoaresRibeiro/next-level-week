@@ -18,6 +18,7 @@ interface Point {
   id: number;
   name: string;
   image: string;
+  image_url: string;
   latitude: number;
   longitude: number;
 }
@@ -106,36 +107,6 @@ const Points = () => {
         <Text style={styles.title}>Bem vindo.</Text>
         <Text style={styles.description}>Encontre no mapa um ponto de coleta.</Text>
 
-        {/* <View style={styles.mapContainer}>
-          <MapView
-            style={styles.map}
-            initialRegion={{
-              latitude: -23.2427023,
-              longitude: -45.8944638,
-              latitudeDelta: 0.014,
-              longitudeDelta: 0.014,
-            }}
-          >
-            <Marker
-              style={styles.mapMarker}
-              onPress={handleNavigationDetail}
-              coordinate={{
-                latitude: -23.2427023,
-                longitude: -45.8944638,
-              }}
-            >
-              <View style={styles.mapMarkerContainer}>
-                <Image
-                  style={styles.mapMarkerImage}
-                  source={{ uri:"https://images.unsplash.com/photo-1580913428023-02c695666d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=400&q=60" }}
-                />
-                <Text style={styles.mapMarkerTitle}>Mercado</Text>
-              </View>
-            </Marker>
-
-          </MapView>
-        </View> */}
-
         <View style={styles.mapContainer}>
           { initialPosition[0] !== 0 && (
             <MapView
@@ -160,7 +131,7 @@ const Points = () => {
                   <View style={styles.mapMarkerContainer}>
                     <Image
                       style={styles.mapMarkerImage}
-                      source={{ uri:"https://images.unsplash.com/photo-1580913428023-02c695666d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=400&q=60" }}
+                      source={{ uri: point.image_url }}
                     />
                     <Text style={styles.mapMarkerTitle}>Mercado</Text>
                   </View>
