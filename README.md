@@ -50,19 +50,19 @@ O projeto consiste em 3 aplicações:
 ## Back-end (server)
 
 Iniciar repositório sem prompts
-```
+``` console
 mkdir server
 npm init -y
 ```
 
 Adicionar Express
-```
+``` console
 npm install express
 npm install @types/express -D
 ```
 
 Iniciar typescript
-```
+``` console
 npm install typescript -D
 npm install ts-node -D
 npx tsc --init
@@ -70,74 +70,74 @@ npm install ts-node-dev -D
 ```
 
 Rodar aplicação sem live reload
-```
+``` console
 npx ts-node src/server.ts
 ```
 
 Rodar aplicação com live reload
-```
+``` console
 npx ts-node-dev src/server.ts
 ```
 
 ## Front-end (web)
 
 Criar estrutura inicial 
-```
+``` console
 npx create-react-app web --template=typescript
 ```
 
 Rodar aplicação
-```
+``` console
 npm start
 ```
 
 Pacote de ícones do React
-```
+``` console
 npm install react-icons
 ```
 
 Pacote de rotas
-```
+``` console
 npm install react-router-dom
 ```
 
 ## Mobile
 
 Instalar o Expo CLI globalmente
-```
+``` console
 npm install -g expo-cli
 ```
 
 Iniciar projeto
-```
+``` console
 expo init mobile
 ```
 
 Instalar react-navigation
-```
+``` console
 npm install @react-navigation/native
 expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 npm install @react-navigation/stack
 ```
 
 Instalar fontes do Google
-```
+``` console
 expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
 ```
 
 Instalar extensão para maps
-```
+``` console
 expo install react-native-maps
 expo install expo-location
 ```
 
 Instalar extensão para envio de email
-```
+``` console
 expo install expo-mail-composer
 ```
 
 Rodar projeto
-```
+``` console
 yarn start # you can open iOS, Android, or web from here, or run them directly with the commands below.
 yarn android
 yarn ios # requires an iOS device or access to a macOS for a simulator
@@ -338,7 +338,7 @@ console.log(usuario);
 
 ## React e Typescript
 - React.FC<InterfaceNameProps>: React Function Component. Tipo genérico do typescript que recebe uma interface como parâmetro. Ex:
-```
+``` typescript
 import React from 'react';
 
 interface HeaderProps {
@@ -354,10 +354,11 @@ const Header:React.FC<HeaderProps> = () => {
 };
 
 export default Header;
-```
+``` 
+
 - Interface: Definição de tipagem no Typescript (Ver React.FC)
 - useState: Gerenciamento de estados no React
-```
+``` typescript
 import React, { useState } from 'react';
 import './App.css';
 
