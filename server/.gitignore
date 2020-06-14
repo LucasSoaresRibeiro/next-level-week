@@ -2,3 +2,4 @@ node_modules
 uploads/*
 !upload/.gitkeep
 *.sqlite
+package-lock.json
